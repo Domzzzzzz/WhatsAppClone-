@@ -13,6 +13,8 @@ import Loader from 'angular-ecmascript/module-loader';
 import { Meteor } from 'meteor/meteor';
 
 // Modules
+import ChatsCtrl from '../controllers/chats.controller';
+import CalendarFilter from '../filters/calendar.filter';
 import RoutesConfig from '../routes';
 const App = 'WhatsUpApp';
 
@@ -22,7 +24,10 @@ Angular.module(App, [
   'ionic'
 ]);
 
-new Loader(App).load(RoutesConfig);
+new Loader(App)
+  .load(ChatsCtrl)
+  .load(CalendarFilter)
+  .load(RoutesConfig);
 
 // Startup
 if (Meteor.isCordova) {
