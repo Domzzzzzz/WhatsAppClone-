@@ -5,6 +5,7 @@
     "start": "meteor run"
   },
   "dependencies": {
+    "angular-moment": "^1.0.0",
     "angular-sanitize": "^1.5.3",
     "angular-ui-router": "^0.2.18",
     "ionic-scripts": "0.0.1",

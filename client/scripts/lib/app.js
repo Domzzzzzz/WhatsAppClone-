@@ -1,10 +1,10 @@
 // AngularJS/Ionic modules
-// This file initializes all modules needed
-// for the project & loads the module helpers
+// This file initializes all modules/module-helpers needed
 
 // Libraries
 import 'angular-animate';
 import 'angular-meteor';
+import 'angular-moment';
 import 'angular-sanitize';
 import 'angular-ui-router';
 import 'ionic-scripts';
@@ -14,6 +14,8 @@ import { Meteor } from 'meteor/meteor';
 
 // Modules
 import ChatsCtrl from '../controllers/chats.controller';
+import ChatCtrl from '../controllers/chat.controller';
+import InputDirective from '../directives/input.directive';
 import CalendarFilter from '../filters/calendar.filter';
 import RoutesConfig from '../routes';
 const App = 'WhatsUpApp';
@@ -21,11 +23,15 @@ const App = 'WhatsUpApp';
 // App
 Angular.module(App, [
   'angular-meteor',
+  'angularMoment',
   'ionic'
 ]);
 
+// Loading the controllers
 new Loader(App)
   .load(ChatsCtrl)
+  .load(ChatCtrl)
+  .load(InputDirective)
   .load(CalendarFilter)
   .load(RoutesConfig);
 

@@ -24,3 +24,4 @@ mobile-status-bar             # Avoid the status bar info covering app content.
 launch-screen                 # App will have launch image rather than loading bar
 dab0mb:ionic-assets           # Ionic mobile framework
 fourseven:scss
+check

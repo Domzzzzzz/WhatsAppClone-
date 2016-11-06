@@ -1,6 +1,6 @@
 // This file contains the routes & states for the views
 // Routes & states defined using angular-ui-router
-// App has these tabs: favorites, recents, contacts, chats, and settings
+// App has the tabs: favorites, recents, contacts, chats, and settings
 
 import { Config } from 'angular-ecmascript/module-helpers';
 
@@ -18,6 +18,15 @@ export default class RoutesConfig extends Config {
           'tab-chats': {
             templateUrl: 'client/templates/chats.html',
             controller: 'ChatsCtrl as chats'
+          }
+        }
+      })
+      .state('tab.chat', {
+        url: '/chats/:chatId',
+        views: {
+          'tab-chats': {
+            templateUrl: 'client/templates/chat.html',
+            controller: 'ChatCtrl as chat'
           }
         }
       });

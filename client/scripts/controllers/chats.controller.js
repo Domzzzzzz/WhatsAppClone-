@@ -19,5 +19,5 @@ export default class ChatsCtrl extends Controller {
   }
 }
 
-// set the name of the chats controller for importing in other files 
+// set the name of the chats controller for exporting
 ChatsCtrl.$name = 'ChatsCtrl';
